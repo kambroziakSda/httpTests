@@ -1,5 +1,9 @@
 package org.example;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -88,6 +92,12 @@ public class AppTest {
     public void buildObjectFromJson() {
 
     }*/
+
+    @Test
+    public void testJackson() throws JsonProcessingException {
+        Student student = new Student();
+        ObjectMapper objectMapper = new ObjectMapper();
+    }
 
     @Test
     public void sendStudentData() throws IOException {
